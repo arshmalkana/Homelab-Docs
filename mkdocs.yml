@@ -1,4 +1,8 @@
 site_name: "Arsh's Homelab"
+repo_url: https://github.com/arshmalkana
+repo_name: GitHub
+markdown_extensions:
+  - codehilite
 theme:
   name: shadcn
   show_title: true 
