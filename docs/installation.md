@@ -7,7 +7,7 @@ This is how i setted-up my homelab server from scratch.
 ## 1. Install Ubuntu Server
 
 1. Download the latest **Ubuntu Server LTS ISO** (I used `24.04.3 LTS`).  
-   👉 https://ubuntu.com/download/server
+   👉 [https://ubuntu.com/download/server](https://ubuntu.com/download/server)
 
 2. Flash the ISO onto a USB stick (I used [Rufus](https://rufus.ie/) on Windows).
 
@@ -22,10 +22,10 @@ This is how i setted-up my homelab server from scratch.
 
 
 5. After logging in via SSH or locally:
-   ```bash
-   sudo apt update && sudo apt upgrade -y
-   sudo reboot
-   ```
+```bash
+sudo apt update && sudo apt upgrade -y
+sudo reboot
+```
 
 ---
 

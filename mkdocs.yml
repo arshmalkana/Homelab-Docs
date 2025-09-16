@@ -4,6 +4,7 @@ repo_url: https://github.com/arshmalkana
 repo_name: GitHub
 markdown_extensions:
   - codehilite
+  - attr_list
 theme:
   name: shadcn  
   show_title: true 

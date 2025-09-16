@@ -60,28 +60,28 @@ Instead of exposing homelab directly to the internet, you can create a tunnel fr
 
   1. On your server, install `cloudflared`:
 
-    ```bash
-    wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
-    sudo dpkg -i cloudflared-linux-amd64.deb
-    ```
+```bash
+wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
+sudo dpkg -i cloudflared-linux-amd64.deb
+```
 
   2. Authenticate:
 
-    ```bash
-    cloudflared tunnel login
-    ```
+```bash
+cloudflared tunnel login
+```
 
   3. Create a tunnel:
 
-    ```bash
-    cloudflared tunnel create homelab-tunnel
-    ```
+```bash
+cloudflared tunnel create homelab-tunnel
+```
 
   4. Add route:
 
-    ```bash
-    cloudflared tunnel route dns homelab-tunnel portainer.itsarsh.dev
-    ```
+```bash
+cloudflared tunnel route dns homelab-tunnel portainer.itsarsh.dev
+```
 
   5. Create a config:
   
@@ -99,10 +99,10 @@ Instead of exposing homelab directly to the internet, you can create a tunnel fr
 
   6. Enable and run:
 
-    ```bash
-    sudo systemctl enable cloudflared
-    sudo systemctl start cloudflared
-    ```
+```bash
+sudo systemctl enable cloudflared
+sudo systemctl start cloudflared
+```
 
 
 ---

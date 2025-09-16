@@ -9,7 +9,7 @@ Once server is up and running with Docker, Portainer, Nginx Proxy Manager (NPM),
 
 I use Portainer which manages Docker containers with a clean GUI. NPM and other apps can be deployed directly through Portainer.
 
-### Step-by-step: Deploy an App (Example: Whoami)
+### Deploy an App (Example: Whoami)
 
 1. **Login to Portainer** via LAN or Tailscale at `http://portainer.itsarsh.dev`
 2. Go to `Containers → Add Container`
@@ -24,6 +24,9 @@ I use Portainer which manages Docker containers with a clean GUI. NPM and other 
 6. Click **Deploy the container**
 
 App will now be running on: `http://192.168.1.50:8080`
+
+
+  ![How to create container](images/create-container.png){ width="600" }
 
 ---
 
@@ -51,4 +54,7 @@ Site is up and running and It can be viewed here,
 
 Now visit: `https://whoami.itsarsh.dev` in your browser.
 
+
+
+  ![How to create proxy](images/create-proxy.png){ width="600" }
 ---

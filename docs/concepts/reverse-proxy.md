@@ -2,7 +2,6 @@
 
 A **reverse proxy** is a server that sits in front of one or more web servers and forwards client requests to the appropriate backend server. Unlike a **forward proxy**, which proxies on behalf of clients, a reverse proxy acts on behalf of servers.
 
-![Placeholder: Diagram explaining reverse proxy](../images/reverse-proxy-diagram.png)
 
 ## Why Use a Reverse Proxy?
 

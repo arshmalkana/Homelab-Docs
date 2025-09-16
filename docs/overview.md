@@ -11,6 +11,8 @@ While setting up my homelab the goal in my mind was to keep things simple but re
   I choose it for stability, long-term support, and wide community adoption.  
   Moreover, Server edition also does not have any DE so it runs much more smoothly as we only need to SSH into servers and not actually use it with GUI.
 
+  ![Ubuntu Server](images/ubuntu.png){ width="600" }
+
 - **Docker & Docker Compose**  
   Every service runs inside containers.  
   This makes it very easy to upgrade, move, or rebuild apps.
@@ -23,14 +25,17 @@ While setting up my homelab the goal in my mind was to keep things simple but re
 - **Portainer**  
   Web-based Docker management.  
   Makes it simple to spin up and monitor containers with its incredeble web based UI.
+  ![Portainer Preview](images/portainer.png){ width="600" }
 
 - **Cockpit**  
   General server manager.  
   Lets me update packages, check logs, and view performance graphs from a browser.
+  ![Cockpit Preview](images/cockpit.png){ width="600" }
 
 - **Nginx Proxy Manager (NPM)**  
   Reverse proxy and SSL certificate manager.  
   It allows all services to run on their own subdomains (e.g., `portainer.itsarsh.dev`, `netdata.itsarsh.dev`).  
+  ![NPM Preview](images/npm.png){ width="600" }
 
 ---
 
@@ -54,6 +59,7 @@ While setting up my homelab the goal in my mind was to keep things simple but re
 - **Netdata**  
   Real-time monitoring of CPU, RAM, network, and disk usage.  
   I use it to spot unusual activity before it becomes a problem.
+  ![NetData Preview](images/netdata.png){ width="600" }
 
 - **Smartmontools**  
   It keeps an eye on disk health and alerts me if a drive is close to failure.
