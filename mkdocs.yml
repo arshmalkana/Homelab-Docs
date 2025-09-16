@@ -1,0 +1,19 @@
+site_name: "Arsh's Homelab"
+theme:
+  name: shadcn
+  show_title: true 
+  show_stargazers: true 
+  pygments_style:  
+        light: shadcn-light
+        dark: github-dark
+  icon: heroicons:rocket-launch
+  topbar_sections: false
+  show_datetime: false 
+nav:
+  - Home: index.md
+  - Overview: overview.md
+  - Installation: installation.md
+  - Deploying Apps: deploying-apps.md
+  - Concepts:
+      - Reverse Proxy: concepts/reverse-proxy.md
+      - DNS & Cloudflare: concepts/dns-cloudflare.md
