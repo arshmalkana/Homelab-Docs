@@ -14,6 +14,10 @@ A *homelab* is a personal technology playground. It is a space where you can:
 * Host services for yourself, friends, or a small community
 * Gain practical experience for IT, system administration, and development roles
 
+
+
+  ![Homelab](images/homelab.png){ width="600" }
+
 ---
 
 ## Hardware
