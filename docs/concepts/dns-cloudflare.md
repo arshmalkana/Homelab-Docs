@@ -84,19 +84,18 @@ Instead of exposing homelab directly to the internet, you can create a tunnel fr
     ```
 
   5. Create a config:
-  ```yml
-    #/etc/cloudflared/config.yml
-    tunnel: homelab-tunnel
-    credentials-file: /root/.cloudflared/homelab-tunnel.json
-    ingress:
-      - hostname: portainer.itsarsh.dev
-        service: http://localhost:9000
-      - hostname: netdata.itsarsh.dev
-        service: http://localhost:19999
-      - service: http_status:404
-  ```
-
-
+  
+```yml
+  #/etc/cloudflared/config.yml
+  tunnel: homelab-tunnel
+  credentials-file: /root/.cloudflared/homelab-tunnel.json
+  ingress:
+    - hostname: portainer.itsarsh.dev
+      service: http://localhost:9000
+    - hostname: netdata.itsarsh.dev
+      service: http://localhost:19999
+    - service: http_status:404
+```
 
   6. Enable and run:
 
