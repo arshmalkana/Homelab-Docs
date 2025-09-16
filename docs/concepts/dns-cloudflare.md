@@ -28,7 +28,7 @@ Cloudflare provides:
 * Secure reverse proxy with **Cloudflare Tunnel** (bypasses NAT and firewall)
 * HTTPS with automatic SSL certificates
 
-You don’t need to expose your home IP or open ports. Instead, your homelab connects **outbound** to Cloudflare’s servers.
+You don't need to expose your home IP or open ports. Instead, your homelab connects **outbound** to Cloudflare's servers.
 
 ---
 
@@ -58,52 +58,52 @@ Instead of exposing homelab directly to the internet, you can create a tunnel fr
 
 ## Setting Up Cloudflare Tunnel
 
-1. On your server, install `cloudflared`:
+  1. On your server, install `cloudflared`:
 
-  ```bash
-  wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
-  sudo dpkg -i cloudflared-linux-amd64.deb
+    ```bash
+    wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
+    sudo dpkg -i cloudflared-linux-amd64.deb
+    ```
+
+  2. Authenticate:
+
+    ```bash
+    cloudflared tunnel login
+    ```
+
+  3. Create a tunnel:
+
+    ```bash
+    cloudflared tunnel create homelab-tunnel
+    ```
+
+  4. Add route:
+
+    ```bash
+    cloudflared tunnel route dns homelab-tunnel portainer.itsarsh.dev
+    ```
+
+  5. Create a config:
+  ```yml
+    #/etc/cloudflared/config.yml
+    tunnel: homelab-tunnel
+    credentials-file: /root/.cloudflared/homelab-tunnel.json
+    ingress:
+      - hostname: portainer.itsarsh.dev
+        service: http://localhost:9000
+      - hostname: netdata.itsarsh.dev
+        service: http://localhost:19999
+      - service: http_status:404
   ```
 
-2. Authenticate:
-
-  ```bash
-  cloudflared tunnel login
-  ```
-
-3. Create a tunnel:
-
-  ```bash
-  cloudflared tunnel create homelab-tunnel
-  ```
-
-4. Add route:
-
-  ```bash
-  cloudflared tunnel route dns homelab-tunnel portainer.itsarsh.dev
-  ```
-
-5. Create a config:
-```yml
-  #/etc/cloudflared/config.yml
-  tunnel: homelab-tunnel
-  credentials-file: /root/.cloudflared/homelab-tunnel.json
-  ingress:
-    - hostname: portainer.itsarsh.dev
-      service: http://localhost:9000
-    - hostname: netdata.itsarsh.dev
-      service: http://localhost:19999
-    - service: http_status:404
-```
 
 
+  6. Enable and run:
 
-6. Enable and run:
-
-  ```bash
-  sudo systemctl enable cloudflared
-  sudo systemctl start cloudflared
-  ```
+    ```bash
+    sudo systemctl enable cloudflared
+    sudo systemctl start cloudflared
+    ```
 
 
 ---
