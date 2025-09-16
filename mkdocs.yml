@@ -1,12 +1,11 @@
 site_name: "Arsh's Homelab"
-site_url: https://homelab.itsarsh.dev/
+site_url: https://homelab.itsarsh.dev
 repo_url: https://github.com/arshmalkana
 repo_name: GitHub
 markdown_extensions:
   - codehilite
 theme:
   name: shadcn  
-  custom_dir: overrides
   show_title: true 
   show_stargazers: true 
   pygments_style:  
