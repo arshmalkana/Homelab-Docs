@@ -1,4 +1,5 @@
 site_name: "Arsh's Homelab"
+site_url: https://homelab.itsarsh.dev/
 repo_url: https://github.com/arshmalkana
 repo_name: GitHub
 markdown_extensions:
