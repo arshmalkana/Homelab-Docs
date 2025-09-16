@@ -5,7 +5,8 @@ repo_name: GitHub
 markdown_extensions:
   - codehilite
 theme:
-  name: shadcn
+  name: shadcn  
+  custom_dir: overrides
   show_title: true 
   show_stargazers: true 
   pygments_style:  
