@@ -12,7 +12,6 @@ A *homelab* is a personal technology playground. It is a space where you can:
 * Learn how servers and networks work
 * Test automation, monitoring, and deployment tools
 * Host services for yourself, friends, or a small community
-* Gain practical experience for IT, system administration, and development roles
 
 
 
@@ -23,6 +22,7 @@ A *homelab* is a personal technology playground. It is a space where you can:
 ## Hardware
 
 Current setup:
+
 - *Dell OptiPlex (Small Form Factor)*  
   - Intel Core i5 (quad-core)  
   - 16 GB RAM  

@@ -37,7 +37,7 @@ These are the main tools I installed on my homela.
 ### 1. Cockpit
 
 **Purpose**:  
-Cockpit is a web-based system manager for Linux. It gives me a dashboard to monitor resources, manage users, update packages, and troubleshoot without needing to SSH for every small task.
+Cockpit is a web-based system manager for Linux. Its a dashboard to monitor resources, manage users, update packages, and troubleshoot without needing to SSH for every small task.
 
 **Install**:
 
@@ -81,7 +81,7 @@ docker run -d \
 ### 3. Nginx Proxy Manager (NPM)
 
 **Purpose**:
-NPM acts as a reverse proxy. Instead of remembering ports (`9090`, `9000`, etc.), I can map services to subdomains like:
+NPM is a reverse proxy. Instead of remembering ports (`9090`, `9000`, etc.), I can map services/ports to subdomains like:
 
 * `cockpit.itsarsh.dev`
 * `portainer.itsarsh.dev`
@@ -204,16 +204,16 @@ This is what final firewall rules looks like:
 
 #### Access Policy:
 
-* **Public Internet**: only ports `80` and `443` (websites via NPM/Cloudflare).
+* **Public Internet**: only ports `80` and `443` are public for HTTP and HTTPS
 * **LAN**: admin panel on port `81`, Cockpit (`9090`), Netdata (`19999`), Portainer (`9443`).
-* **Tailscale**: full access for remote management, including SSH.
+* **Tailscale**: full access for every port and remote management, including SSH.
 
 ---
 
 ### 7. SMART Monitoring Tools
 
 **Purpose**:
-I use it to check the health of drives and receive alerts if a disk is failing.
+It is used to check the health of drives and it sends alerts if a disk is failing.
 
 **Install**:
 
@@ -233,7 +233,7 @@ sudo smartctl -a /dev/sda
 ### 8. Tailscale
 
 **Purpose**:
-Its a Zero-config VPN. I use it to access my homelab securely from anywhere without relying on Cloudflare for internal tools.
+Its a VPN with Zero-config required. I use it to access my homelab ssecurely because i dont want to expose internal ports on public network.
 
 **Install**:
 
@@ -243,5 +243,5 @@ sudo tailscale up
 ```
 
 **Usage**:
-Now I can access my homelab using its **Tailscale IP** from my laptop or phone.
-Example: `https://100.x.y.z:9090` → Cockpit, even if Cloudflare Tunnel is down.
+Now, I can access my homelab using its **Tailscale IP**.
+Example: `https://100.x.y.z:9090` → Cockpit.

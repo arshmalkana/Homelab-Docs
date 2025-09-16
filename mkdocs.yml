@@ -20,6 +20,3 @@ nav:
   - Overview: overview.md
   - Installation: installation.md
   - Deploying Apps: deploying-apps.md
-  - Concepts:
-      - Reverse Proxy: concepts/reverse-proxy.md
-      - DNS & Cloudflare: concepts/dns-cloudflare.md

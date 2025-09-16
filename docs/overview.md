@@ -8,7 +8,7 @@ While setting up my homelab the goal in my mind was to keep things simple but re
 ## Base Layer
 
 - **Ubuntu Server 24.04 LTS**  
-  I choose it for stability, long-term support, and wide community adoption.  
+  I choose it because of its stability, long-term support, and wide community adoption.  
   Moreover, Server edition also does not have any DE so it runs much more smoothly as we only need to SSH into servers and not actually use it with GUI.
 
   ![Ubuntu Server](images/ubuntu.png){ width="600" }
